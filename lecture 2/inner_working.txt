@@ -1,0 +1,35 @@
+🔍 What Happens When You Run a Python Script?
+When you execute a Python script, this is what happens under the hood:
+
+1. Source Code (.py)
+You write code in a .py file using high-level Python syntax.
+
+Example:
+
+python
+Copy
+Edit
+print("Hello, World!")
+
+2. Compilation to Bytecode
+ Python compiles the source code to an intermediate form called bytecode.
+ This is a .pyc file (you’ll often see these in a __pycache__ folder).
+ Bytecode is a low-level, platform-independent representation of your code.
+ It’s not machine code and not readable by humans easily.
+ ✅ Purpose: To improve performance by avoiding recompilation every time.
+
+3. Python Virtual Machine (PVM)
+ The PVM is a part of the Python interpreter.
+ It reads the bytecode line by line and executes it.
+ This is where the actual execution happens — memory allocation, function calls, etc.
+
+Think of it like this:
+Your Code (.py) ─▶ Bytecode (.pyc) ─▶ Python Virtual Machine ─▶ Output
+
+⚙️ Important Clarification
+The term “interpreter” often refers to the whole CPython runtime (compiler + PVM).
+Bytecode is specific to the interpreter implementation (e.g., CPython, PyPy).
+CPython is the default and most widely used implementation of Python.
+
+🔁 Optional: JIT Compilation (in PyPy)
+If you're using PyPy (an alternative Python interpreter), it uses Just-In-Time (JIT) compilation to convert bytecode to machine code for faster execution.
